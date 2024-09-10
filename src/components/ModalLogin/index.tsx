@@ -110,7 +110,7 @@ export const ModalLogin: FC = (): JSX.Element => {
     <>
       {isOpen && (
         <div
-          className={styles.container}
+          className={styles.containerModal}
           onClick={() => handleOpenModal(false)}
         >
           <div
