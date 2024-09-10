@@ -36,13 +36,15 @@ export const PopularBanner: FC<PopularBannerProps> = ({
           <p className={styles.description}>{description}</p>
         </div>
         <div className={styles.indicators}>
-          <LikeButton
-            key={isFavorite ? "like" : "unlike"}
-            idMovie={id}
-            isFavorite={isFavorite}
-            fontSize={32}
-            isClickable={true}
-          />
+          <div className={styles.favorite}>
+            <LikeButton
+              key={isFavorite ? "like" : "unlike"}
+              idMovie={id}
+              isFavorite={isFavorite}
+              fontSize={32}
+              isClickable={true}
+            />
+          </div>
           <div className={styles.rating}>
             <RadialProgress rating={rating} />
           </div>
