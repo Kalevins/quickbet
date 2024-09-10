@@ -1,0 +1,35 @@
+:root {
+  --color-primary: rgb(240, 185, 11);
+  --color-primary-opacity: rgba(240, 185, 11, 0.9);
+  --color-success: rgb(77, 161, 79);
+  --color-success-opacity: rgba(77, 161, 79, 0.5);
+  --color-warning: rgb(255, 136, 0);
+  --color-warning-opacity: rgba(255, 136, 0, 0.5);
+  --color-error: rgb(229, 69, 69);
+  --color-error-opacity: rgba(229, 69, 69, 0.5);
+  --color-secondary: #7d25b3;
+  --color-gray: #f4f4f4;
+  --color-darkGray: #e5e5e5;
+  --color-white: rgb(245, 245, 245);
+  --color-white-opacity: rgba(245, 245, 245, 0.1);
+  --color-black: rgb(10, 10, 10);
+  --color-black-opacity: rgba(10, 10, 10, 0.1);
+  /* Backgrounds */
+  --color-background-dark: var(--color-black);
+  --color-background-light: var(--color-white);
+  /* Backgrounds Opacity */
+  --color-background-opacity-dark: var(--color-black-opacity);
+  --color-background-opacity-light: var(--color-white-opacity);
+  /* Backgrounds Inverted */
+  --color-background-inverted-dark: var(--color-white);
+  --color-background-inverted-light: var(--color-black);
+  /* Backgrounds Inverted Opacity */
+  --color-background-inverted-opacity-dark: var(--color-white-opacity);
+  --color-background-inverted-opacity-light: var(--color-black-opacity);
+  /* Text */
+  --color-text-dark: var(--color-white);
+  --color-text-light: var(--color-black);
+  /* Text Inverted */
+  --color-text-inverted-dark: var(--color-black);
+  --color-text-inverted-light: var(--color-white);
+}

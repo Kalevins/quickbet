@@ -1,0 +1,140 @@
+.container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100dvw;
+  z-index: 10;
+
+  .modal {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    z-index: 11;
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--color-background-inverted-opacity);
+    border-radius: 10px;
+    margin: auto;
+    max-width: 80dvw;
+    max-height: 80dvh;
+
+    .formContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      .buttonsContainer {
+        display: flex;
+        justify-content: center;
+        background-color: var(--color-background);
+        width: max-content;
+        border-radius: 10px;
+
+        .button {
+          border-radius: 10px;
+          width: 100px;
+          transition: background-color 0.3s;
+        }
+
+        .button#active {
+          background-color: var(--color-primary);
+        }
+      }
+
+      .form {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 60%;
+
+        .formClass {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          width: 100%;
+
+          .input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: var(--color-background-inverted);
+            color: var(--color-text-inverted);
+            border: none;
+          }
+
+          .input#active, .input::placeholder {
+            color: var(--color-text-inverted);
+            border: none;
+          }
+        }
+
+        .buttonForm {
+          width: 100%;
+          background-color: var(--color-primary);
+          color: var(--color-text-inverted);
+        }
+      }
+
+      .messages {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        color: var(--color-text);
+        text-align: center;
+
+        .error {
+          color: var(--color-error);
+        }
+
+        .info, .error {
+          text-align: center;
+          height: 20px;
+        }
+      }
+    }
+
+    .infoContainer {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--color-background);
+      border-radius: 0 10px 10px 0;
+      text-align: center;
+      padding: 20px;
+      gap: 20px;
+
+      .imageContainer {
+        display: flex;
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+
+        .image {
+          position: absolute;
+          height: 250%;
+          width: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    .modal {
+      grid-template-columns: 1fr;
+      padding: 10px;
+      width: 90vw;
+      height: 90vh;
+
+      .infoContainer {
+        display: none;
+      }
+    }
+  }
+}

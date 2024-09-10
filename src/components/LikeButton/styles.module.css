@@ -1,0 +1,17 @@
+.favorite {
+  background-color: transparent;
+  color: var(--color-text);
+  padding: 2px;
+  box-shadow: none;
+  width: auto;
+  height: max-content;
+  cursor: default;
+}
+
+.favorite#clickable {
+  cursor: pointer;
+}
+
+.favorite:hover {
+  box-shadow: none;
+}

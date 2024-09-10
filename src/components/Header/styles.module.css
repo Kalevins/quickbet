@@ -1,0 +1,39 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 32px;
+  align-items: center;
+  background-color: var(--color-background);
+  padding: 16px 32px;
+  box-sizing: border-box;
+
+  .links {
+    display: flex;
+    gap: 32px;
+  }
+
+  .options {
+    display: flex;
+    gap: 32px;
+
+    .darkMode {
+      background-color: transparent;
+      color: var(--color-text);
+      padding: 2px;
+      box-shadow: none;
+      font-size: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    .logo {
+      display: none;
+    }
+  }
+}

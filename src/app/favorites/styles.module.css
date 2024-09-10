@@ -1,0 +1,20 @@
+.container {
+  display: grid;
+
+  .content {
+    display: grid;
+    grid-template-columns: auto;
+
+    .movies {
+      background-color: var(--color-background-inverted-opacity);
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      gap: 40px;
+      width: 100%;
+      height: auto;
+      box-sizing: border-box;
+      position: relative;
+    }
+  }
+}

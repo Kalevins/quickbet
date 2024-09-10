@@ -1,0 +1,99 @@
+.layoutContainer {
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  position: relative;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+
+  .content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    background-color: var(--color-background-inverted-opacity);
+
+    .filters {
+      position: sticky;
+      top: 82px;
+      left: 0;
+      height: max-content;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      gap: 18px;
+
+      .search {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .searchInput {
+          border-bottom: 1px solid var(--color-text);
+          border-end-start-radius: 0;
+          border-end-end-radius: 0;
+        }
+      }
+
+      .genres {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .genreSelect {
+          width: 100%;
+          background-color: var(--color-background);
+          padding: 10px 20px;
+          box-sizing: border-box;
+        }
+
+        .genreList {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          background-color: var(--color-background);
+          padding: 10px;
+          overflow-y: auto;
+          max-height: 400px;
+
+          .genre {
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            justify-content: start;
+            transition: background-color 0.3s;
+          }
+
+          .genre#selected, .genre:hover {
+            background-color: var(--color-background-inverted-opacity);
+          }
+        }
+      }
+    }
+
+    .movies {
+      background-color: var(--color-background-inverted-opacity);
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      gap: 40px;
+      width: 100%;
+      height: auto;
+      box-sizing: border-box;
+      position: relative;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    .content {
+      grid-template-columns: auto;
+
+      .filters {
+        display: none;
+      }
+    }
+  }
+}

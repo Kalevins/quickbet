@@ -1,0 +1,50 @@
+@import 'buttons.css';
+@import 'colors.css';
+@import 'inputs.css';
+@import 'screens.css';
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  transition: background-color 0.3s, color 0.3s;
+
+  & ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    border-radius: 20px;
+  }
+
+  & ::-webkit-scrollbar-track {
+    background: var(--color-background);
+    border-radius: 0px;
+  }
+
+  & ::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 20px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, ul, label, p, span, small, label, code {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}

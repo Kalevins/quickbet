@@ -1,0 +1,8 @@
+:root {
+  --size-sm: 640px;
+  --size-md: 768px;
+  --size-lg: 1024px;
+  --size-xl: 1280px;
+  --size-xxl: 1536px;
+  /* no es compatible hasta ahora dentro de las media querys */
+}
