@@ -1,40 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Quickbet
 
-## Getting Started
+_Proyecto de un sistema de cine que consume la API de TMDB
 
-First, run the development server:
+### 🔧 Instalación
 
-```bash
+_En el directorio del proyecto ejecutar:_
+
+```
+npm i
+```
+```
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📦 Resultados
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+_Puedes ver el proyecto en:_
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+[Quickbet](https://quickbet.vercel.app)
 
-## Learn More
+_Las credenciales de usuario son:_
 
-To learn more about Next.js, take a look at the following resources:
+```
+email: admin@admin.com
+password: admin1234
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📦 Despliegue en Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+_Para desplegar el proyecto en Vercel, se debe configurar las variables de entorno_
 
-## Deploy on Vercel
+```
+NEXT_PUBLIC_TMDB_API_KEY=tu_api_key
+NEXT_PUBLIC_TMDB_BASE_API_URL=https://api.themoviedb.org/3
+NEXT_PUBLIC_TMDB_ACCESS_TOKEN=tu_access_token
+NEXT_PUBLIC_BACK_URL=http://localhost:3200
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+_Y desplegar el proyecto_
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🛠️ Construcción
 
-Apuntes
+* [NEXT.js](https://nextjs.org/) - Framework de React
+* [React](https://es.reactjs.org/) - Biblioteca de JavaScript
+* [TypeScript](https://www.typescriptlang.org/) - Superset de JavaScript
+* [CSS Modules](https://developer.mozilla.org/es/docs/Web/CSS) - Lenguaje de estilos
 
-Se modifico eslint para que no muestre errores en los nombres de las funciones y al importarlas y en los imports type, la instalacion de husky es deprecada,
+## ✒️ Autores
+
+* **Kevin Muñoz Rengifo** - *Totalidad* - [Kalevins](https://github.com/Kalevins)
+
+## 🎁 Expresiones de Gratitud
+
+* Agradecimientos especiales a Inlaze
