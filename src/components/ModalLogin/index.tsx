@@ -1,15 +1,12 @@
-"use client";
-
 import type { FormEvent } from "react";
 import { useEffect, useState, type FC } from "react";
 import Image from "next/image";
 
-import { useModalLogin } from "@/contexts";
+import { useModalLogin, useAuth } from "@/contexts";
 import { login, logout, register } from "@/api";
 import ImageSignUp from "@/assets/images/signUp.png";
 import ImageSignIn from "@/assets/images/signIn.png";
 import styles from "./styles.module.css";
-import { useAuth } from "@/contexts/auth";
 
 export const ModalLogin: FC = (): JSX.Element => {
   const activeOptions = {
@@ -108,7 +105,7 @@ export const ModalLogin: FC = (): JSX.Element => {
 
   return (
     <div
-      className={styles.containerModal}
+      className={styles.container}
       id={isOpen ? "" : styles.inactive}
       onClick={() => handleOpenModal(false)}
     >

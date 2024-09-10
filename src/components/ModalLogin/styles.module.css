@@ -1,4 +1,4 @@
-.containerModal {
+.container {
   display: flex;
   position: fixed;
   top: 0;
@@ -124,7 +124,7 @@
   }
 }
 
-.containerModal#inactive {
+.container#inactive {
   display: none;
 }
 

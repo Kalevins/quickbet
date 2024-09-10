@@ -15,8 +15,8 @@ import {
 } from "@/api";
 import { initialMovie, initialMovieLists } from "@/constants";
 import type { Genre, Keyword, Movie, MovieListsResponse } from "@/types";
-import styles from "./styles.module.css";
 import { useAuth, useLoadingScreen } from "@/contexts";
+import styles from "./styles.module.css";
 
 export default function Home(): JSX.Element {
   const { handleIsLoadingScreen } = useLoadingScreen();

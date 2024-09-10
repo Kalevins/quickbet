@@ -9,7 +9,7 @@ import {
   ModalLoginProvider,
   AuthProvider,
 } from "@/contexts";
-import { LoadingScreen, Header, ModalLogin, Loading } from "@/components";
+import { LoadingScreen, Header, Loading } from "@/components";
 import styles from "./styles.module.css";
 import "@/styles/globals.css";
 
@@ -40,7 +40,6 @@ export default function RootLayout({
                     <Header />
                     {children}
                   </div>
-                  <ModalLogin />
                   <LoadingScreen />
                 </ModalLoginProvider>
               </DarkModeProvider>
