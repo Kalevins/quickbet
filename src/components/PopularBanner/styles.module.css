@@ -22,7 +22,7 @@
     gap: 32px;
     align-items: flex-end;
     background-color: var(--color-background-opacity);
-    width: 100%;
+    width: 100% !important;
     height: 100%;
     padding: 48px;
     box-sizing: border-box;
