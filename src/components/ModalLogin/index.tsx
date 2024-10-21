@@ -2,7 +2,7 @@ import type { FormEvent } from "react";
 import { useEffect, useState, type FC } from "react";
 import Image from "next/image";
 
-import { useModalLogin, useAuth } from "@/contexts";
+import { useModalLogin, useAuth, useLoadingScreen } from "@/contexts";
 import { login, logout, register } from "@/api";
 import ImageSignUp from "@/assets/images/signUp.png";
 import ImageSignIn from "@/assets/images/signIn.png";
@@ -22,6 +22,7 @@ export const ModalLogin: FC = (): JSX.Element => {
     },
   ];
 
+  const { handleIsLoadingScreen } = useLoadingScreen();
   const { isOpen, handleOpenModal } = useModalLogin();
   const { isAuth, handleIsAuth } = useAuth();
   const [error, setError] = useState<string>("");
@@ -49,6 +50,7 @@ export const ModalLogin: FC = (): JSX.Element => {
       return;
     }
 
+    handleIsLoadingScreen(true);
     login({
       username: email,
       password,
@@ -61,6 +63,9 @@ export const ModalLogin: FC = (): JSX.Element => {
       })
       .catch(() => {
         setError("Invalid credentials. Please try again.");
+      })
+      .finally(() => {
+        handleIsLoadingScreen(false);
       });
   };
 
@@ -81,6 +86,7 @@ export const ModalLogin: FC = (): JSX.Element => {
       return;
     }
 
+    handleIsLoadingScreen(true);
     register({
       username: email,
       password,
@@ -93,6 +99,9 @@ export const ModalLogin: FC = (): JSX.Element => {
       })
       .catch(() => {
         setError("Invalid credentials. Please try again.");
+      })
+      .finally(() => {
+        handleIsLoadingScreen(false);
       });
   };
 
